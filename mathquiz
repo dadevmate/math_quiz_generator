@@ -1,0 +1,252 @@
+<html>
+<body>
+
+<h1 style="font-family: Lucida Grande; text-align: center; margin-top: 100px;">Maths Quizzes</h1>
+
+<h2 id="qn" style="font-family: futura; text-align: center; margin-top: 300px;">Question</h2>
+<input id="ans" type="text" style="margin-left: 600px; font-size: 20; font-family: futura;">
+<button id="submit" onclick="go()" style="background-color: black; color: white; margin-left: 680px; font-size: 20; font-family: futura; border-radius: 10px;">Submit</button>
+
+<script>
+
+var levelArr = ["1","2"];
+var level = levelArr[Math.floor(Math.random() * levelArr.length)];
+console.log(level);
+if (level == "1"){
+
+
+var firstArr = ["1","2","3","4","5","6","7","8","9"];
+
+var first = firstArr[Math.floor(Math.random() * firstArr.length)];
+var secondArr = ["1","2","3","4","5","6","7","8","9"];
+var second = secondArr[Math.floor(Math.random() * secondArr.length)];
+var thirdArr = ["+","-","*","/"]
+var third = thirdArr[Math.floor(Math.random() * thirdArr.length)];
+
+var expression;
+if (third == "+"){
+
+expression = first + third + second
+document.getElementById("qn").innerHTML = expression;
+function go(){
+
+var ansr = eval(expression);
+
+if (document.getElementById("ans").value == ansr){
+
+alert("Correct! Great job!");
+location.reload();
+
+} else if (document.getElementById("ans").value !== ansr){
+
+alert("Wrong! The correct answer is " + ansr);
+location.reload();
+
+}
+
+}
+}
+
+if (third == "-"){
+
+expression = first + third + second
+document.getElementById("qn").innerHTML = expression;
+
+function go(){
+
+  var ansr = eval(expression);
+
+  if (document.getElementById("ans").value == ansr){
+
+  alert("Correct! Great job!");
+  location.reload();
+
+  } else if (document.getElementById("ans").value !== ansr){
+
+  alert("Wrong! The correct answer is " + ansr);
+  location.reload();
+
+  }
+
+}
+}
+
+if (third == "*"){
+
+expression = first + third + second
+document.getElementById("qn").innerHTML = expression;
+
+function go(){
+
+  var ansr = eval(expression);
+
+  if (document.getElementById("ans").value == ansr){
+
+  alert("Correct! Great job!");
+  location.reload();
+
+  } else if (document.getElementById("ans").value !== ansr){
+
+  alert("Wrong! The correct answer is " + ansr);
+  location.reload();
+
+  }
+}
+}
+
+if (third == "/"){
+
+expression = first + third + second
+document.getElementById("qn").innerHTML = expression;
+function go(){
+
+  var ansr = eval(expression);
+  var answ = Math.round(ansr);
+
+
+  if (document.getElementById("ans").value == answ){
+
+  alert("Correct! Great job!");
+  location.reload();
+
+} else if (document.getElementById("ans").value !== answ){
+
+  alert("Wrong! The correct answer is " + answ);
+  location.reload();
+
+  }
+
+}
+}
+} else if (level == "2"){
+
+var firstArr = ["1","2","3","4","5","6","7","8","9"];
+var first = firstArr[Math.floor(Math.random() * firstArr.length)];
+
+var secondArr = ["1","2","3","4","5","6","7","8","9"];
+var second = secondArr[Math.floor(Math.random() * secondArr.length)];
+
+var thirdArr = ["1","2","3","4","5","6","7","8","9"];
+var third = thirdArr[Math.floor(Math.random() * thirdArr.length)];
+
+var fourthArr = ["1","2","3","4","5","6","7","8","9"];
+var fourth = fourthArr[Math.floor(Math.random() * fourthArr.length)];
+
+var fifthArr = ["+","-","*","/"];
+var fifth = fifthArr[Math.floor(Math.random() * fifthArr.length)]
+
+
+if (fifth == "+"){
+
+  var expression = first + second + fifth + third + fourth;
+
+  document.getElementById('qn').innerHTML =  expression;
+
+function go(){
+
+var ansr = eval(expression);
+var answ = Math.round(ansr);
+
+if (document.getElementById("ans").value == answ){
+
+alert("Correct! Excellent job!");
+location.reload();
+
+} else if (document.getElementById("ans").value !== answ){
+
+alert("Incorrect! The correct answer is " + answ);
+location.reload();
+}
+}
+
+} else if (fifth == "-") {
+
+  var expression = first + second + fifth + third + fourth;
+
+  document.getElementById('qn').innerHTML =  expression;
+
+function go(){
+
+  var ansr = eval(expression);
+  var answ = Math.round(ansr);
+
+  if (document.getElementById("ans").value == answ){
+
+  alert("Correct! Excellent job!");
+  location.reload();
+
+  } else if (document.getElementById("ans").value !== answ){
+
+  alert("Incorrect! The correct answer is " + answ);
+  location.reload();
+
+}
+}
+}else if (fifth == "*"){
+
+  var expression = first + second + fifth + third + fourth;
+
+
+  document.getElementById('qn').innerHTML =  expression;
+
+  function go(){
+
+
+  var ansr = eval(expression);
+  var answ = Math.round(ansr)
+
+
+  if (document.getElementById("ans").value == answ){
+
+  alert("Correct! Excellent job!");
+  location.reload();
+
+  } else if (document.getElementById("ans").value !== answ){
+
+  alert("Incorrect! The correct answer is " + answ);
+  location.reload();
+
+}
+
+}
+
+} else if (fifth == "/"){
+
+
+  var expression = first + second + fifth + third + fourth;
+
+  document.getElementById('qn').innerHTML =  expression;
+  function go(){
+
+
+  var ansr = eval(expression);
+  var answ = Math.round(ansr);
+
+  if (document.getElementById("ans").value == answ){
+
+  alert("Correct! Excellent job!");
+  location.reload();
+
+  } else if (document.getElementById("ans").value !== answ){
+
+  alert("Incorrect! The correct answer is " + answ);
+  location.reload();
+
+}
+
+}
+
+
+}
+
+}
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
